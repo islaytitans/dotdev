@@ -1,6 +1,6 @@
 <template>
-  <article class="p-5 grid items-center text-center">
-    <h1 class="text-green-700 text-3xl font-bold">Jonathan Robbins</h1>
+  <article class="p-5 grid items-center">
+    <h1 class="text-green-700 text-3xl font-bold text-center">Jonathan Robbins</h1>
     <p>Let's do this</p>
     <p class="mt-2">
       <span class="block">Count is: {{ count }}</span>
