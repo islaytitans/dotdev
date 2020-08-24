@@ -1,25 +1,32 @@
 <template>
-  <article class="p-5">
-    <h1 class="text-green-800 text-3xl font-bold">Hello Vite + Vue 3!</h1>
-    <p>Edit ./App.vue to test hot module replacement (HMR).</p>
+  <article class="p-5 grid items-center text-center">
+    <h1 class="text-green-700 text-3xl font-bold">Jonathan Robbins</h1>
+    <p>Let's do this</p>
     <p class="mt-2">
       <span class="block">Count is: {{ count }}</span>
-      <VButton @click="count++">increment</VButton>
+      <button
+        class="bg-green-700 hover:bg-green-500 text-white font-bold py-2 px-4 rounded"
+        @click="increase"
+      >
+        Increment
+      </button>
     </p>
   </article>
 </template>
 
 <script lang="ts">
-import { Vue, Options } from 'vue-class-component'
-import VButton from './components/VButton.vue'
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  setup() {
+    const count = ref(0)
+    const increase = () => {
+      count.value++
+    }
 
-class App extends Vue {
-  count = 0
-}
-
-export default Options({
-  components: {
-    VButton,
+    return {
+      count,
+      increase,
+    }
   },
-})(App)
+})
 </script>
